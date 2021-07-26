@@ -1,0 +1,6 @@
+export const env = {
+    POKE_API_URL: process.env.REACT_APP_POKE_API_URL,
+    POKEDEX_API_URL: process.env.REACT_APP_POKEDEX_API_URL,
+    POKEMON_IMAGES: process.env.REACT_APP_POKEMON_IMAGES,
+    POKEMON_IMAGES_GIF: process.env.REACT_APP_POKEMON_IMAGES_GIF,
+};
