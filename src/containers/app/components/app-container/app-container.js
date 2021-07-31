@@ -1,6 +1,7 @@
 import React, {memo, Suspense} from 'react';
 import {Switch, BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from '../../../home/home';
+import Map from '../../../map/map';
 import PokemonDetail from '../../../pokedex/components/pokemon-detail/pokemon-detail';
 import Pokedex from '../../../pokedex/pokedex';
 import './app-container.scss';
@@ -12,8 +13,9 @@ const AppContaniner = () => {
                 <Suspense fallback={<span>Cargando...</span>}>
                     <Switch>
                         <Route exact path="/">
-                            <Home />
+                            <Map />
                         </Route>
+                        <Route exact path="/catch/:id" children={<Home />}></Route>
                         <Route exact path="/pokedex">
                             <Pokedex />
                         </Route>

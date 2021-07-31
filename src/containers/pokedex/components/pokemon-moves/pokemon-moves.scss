@@ -1,0 +1,21 @@
+.pokemon-moves {
+    text-align: left;
+    &__container {
+        display: grid;
+        grid-template-columns: 20px 100px 200px;
+        column-gap: 5px;
+        padding: 3px 10px;
+        font-weight: bold;
+        color: #5f7f80;
+        font-size: 15px;
+    }
+    &__progress {
+        display: grid;
+        column-gap: 2px;
+    }
+    &__bar {
+        margin: 3px;
+        background-color: #73e9b6;
+        border-radius: 4px;
+    }
+}

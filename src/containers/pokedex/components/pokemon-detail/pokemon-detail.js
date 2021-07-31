@@ -15,6 +15,7 @@ import {getFirstType} from '../../../../utils/pokemon';
 import {toTitleCase} from '../../../../utils/string';
 import useGetPokemon from '../../../home/hooks/use-get-pokemon';
 import useGetPokemonDetail from '../../hooks/use-get-pokemon-detail';
+import PokemonMoves from '../pokemon-moves/pokemon-moves';
 import './pokemon-detail.scss';
 
 const PokemonDetail = () => {
@@ -69,7 +70,7 @@ const PokemonDetail = () => {
                     </div>
 
                     <div>
-                        <img src={pokemon.image} alt="image-pokemon" height="200" />
+                        <img src={pokemon.image} alt="imagen-pokemon" height="200" />
                     </div>
                     <div className="pokemon-detail__card">
                         <div className="pokemon-detail__gender">
@@ -144,6 +145,7 @@ const PokemonDetail = () => {
                                 </div>
                             </div>
                         )}
+                        {pokemon.moves && <PokemonMoves moves={pokemon.moves} />}
 
                         <div onClick={goBack}>
                             <img src={Ok} alt="exit" width="50" />

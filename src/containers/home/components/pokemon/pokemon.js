@@ -4,7 +4,7 @@ import {POKEMON_TYPES} from '../../../../constants/pokemon-types';
 import {toTitleCase} from '../../../../utils/string';
 import './pokemon.scss';
 
-const Pokemon = ({pokemon, onFinishCapture}) => {
+const Pokemon = ({pokemon, onFinishCapture, captured}) => {
     return (
         <div className="pokemon">
             <div
@@ -18,13 +18,21 @@ const Pokemon = ({pokemon, onFinishCapture}) => {
                 <img src={POKEMON_TYPES[pokemon.firstType]} alt="type" width="50" />
             </div>
             <div className="pokemon__container">
-                <div className="pokemon__information">
-                    <img src={BadgePokeball} alt="badge-pokeball" width="25" />
-                    <span>{toTitleCase(pokemon.name)}</span>
-                    <span>/</span>
-                    <span>CP {pokemon.cp}</span>
-                </div>
-                {pokemon && (
+                {!captured && (
+                    <div className="pokemon__information">
+                        <img src={BadgePokeball} alt="badge-pokeball" width="25" />
+                        <span>{toTitleCase(pokemon.name)}</span>
+                        <span>/</span>
+                        <span>CP {pokemon.cp}</span>
+                    </div>
+                )}
+                {captured && (
+                    <div className="pokemon__text">
+                        ¡Ya esta! <br />
+                        <span>¡{toTitleCase(pokemon.name)} capturado!</span>
+                    </div>
+                )}
+                {pokemon && !captured && (
                     <div className="pokemon__image">
                         <img src={pokemon.image} width="120" alt="pokemon" />
                     </div>
