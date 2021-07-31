@@ -15,9 +15,14 @@
         display: flex;
     }
     &__pokemon {
-        text-align: left;
-        align-items: flex-end;
-        display: flex;
+        text-align: center;
+        // align-items: flex-end;
+        // display: flex;
+        background-color: #ddd;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        padding: 10px;
     }
     &__random {
         align-items: flex-end;

@@ -1,0 +1,15 @@
+@import '../../../../assets/styles/mixins/media.scss';
+.random-pokemons {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    &__container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 60%;
+    }
+    &__image {
+        position: sticky;
+    }
+}

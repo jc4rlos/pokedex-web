@@ -1,16 +1,17 @@
 import React, {memo} from 'react';
-import {Link} from 'react-router-dom';
-import {Pokemons, Pokeball, RandomPokemon} from '../../../../assets/images/index';
+import {Pokeball, Cherry} from '../../../../assets/images/index';
 import './footer.scss';
 
-const Footer = ({handleOnGetPokemon, hasPokemon, handleOnCatchPokemon}) => {
+const Footer = ({handleOnSetCherry, hasPokemon, handleOnCatchPokemon}) => {
     return (
         <div className="footer">
             <div className="footer__container">
-                <div className="footer__pokemon">
-                    <Link to="/pokedex">
-                        <img src={Pokemons} alt="pokemons" width="90" />
-                    </Link>
+                <div
+                    className="footer__pokemon"
+                    role="presentation"
+                    onClick={handleOnSetCherry}
+                >
+                    <img src={Cherry} alt="cherry" width="30" />
                 </div>
                 {hasPokemon && (
                     <div
@@ -18,17 +19,10 @@ const Footer = ({handleOnGetPokemon, hasPokemon, handleOnCatchPokemon}) => {
                         role="presentation"
                         onClick={handleOnCatchPokemon}
                     >
-                        <img src={Pokeball} alt="pokeball" width="60" />
+                        <img src={Pokeball} alt="pokeball" width="90" />
                     </div>
                 )}
                 {!hasPokemon && <div />}
-                <div
-                    className="footer__random"
-                    role="presentation"
-                    onClick={handleOnGetPokemon}
-                >
-                    <img src={RandomPokemon} alt="random-pokemon" width="100" />
-                </div>
             </div>
         </div>
     );

@@ -15,6 +15,9 @@ export {default as FemaleShiny} from './female-shiny.png';
 export {default as StarDust} from './stardust.png';
 export {default as Ok} from './ok.png';
 export {default as Close} from './close.png';
+export {default as Cherry} from './cherry.png';
+export {default as Banana} from './banana.png';
+export {default as Pineaple} from './pineaple.png';
 
 export {default as Bug} from './types/bug.png';
 export {default as Dark} from './types/dark.png';

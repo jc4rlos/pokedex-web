@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {useState} from 'react';
 import {env} from '../../../constants/environment';
-import Pokemon from '../../../models/pokemon';
 
 const useGetPokemonDetail = () => {
     const [pokemon, setPokemon] = useState(undefined);
@@ -12,7 +11,6 @@ const useGetPokemonDetail = () => {
         try {
             setLoading(true);
             const result = await axios.get(`${env.POKEDEX_API_URL}pokemons/${id}`);
-            console.log(`result.data`, result.data);
             setPokemon(result.data);
         } catch (error) {
             setError(error);

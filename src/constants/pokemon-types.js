@@ -50,3 +50,24 @@ export const POKEMON_GENDER = {
     female_shiny: FemaleShiny,
     male_shiny: MaleShiny,
 };
+
+export const POKEMON_COLOR_TYPES = {
+    grass: '#63bd62',
+    bug: Bug,
+    dark: Dark,
+    dragon: '#4fa8d8',
+    electric: Electric,
+    fairy: Fairy,
+    fighting: '#ca8aa1',
+    fire: '#e3c396',
+    flying: '#a5c1c5',
+    ghost: '#86a5d8',
+    ground: '#cbb499',
+    ice: '#99e3e0',
+    normal: Normal,
+    poison: Poison,
+    psychic: '#e0b2b4',
+    rock: Rock,
+    steel: '#7dbcc6',
+    water: '#82c6e9',
+};
