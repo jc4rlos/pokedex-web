@@ -18,6 +18,10 @@ export {default as Close} from './close.png';
 export {default as Cherry} from './cherry.png';
 export {default as Banana} from './banana.png';
 export {default as Pineaple} from './pineaple.png';
+export {default as Pencil} from './pencil.png';
+export {default as Cp} from './cp.png';
+export {default as Date} from './date.png';
+export {default as Transfer} from './transfer.png';
 
 export {default as Bug} from './types/bug.png';
 export {default as Dark} from './types/dark.png';

@@ -3,18 +3,15 @@ import {useState} from 'react';
 import {env} from '../../../constants/environment';
 import Pokemon from '../../../models/pokemon';
 
-const useCatchPokemon = () => {
+const usePokemonTransfer = () => {
     const [pokemon, setPokemon] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
 
-    const catchPokemon = async (data) => {
+    const transfer = async (id) => {
         try {
             setLoading(true);
-            const result = await axios.post(`${env.POKEDEX_API_URL}pokemons`, {
-                ...data,
-                id: null,
-            });
+            const result = await axios.delete(`${env.POKEDEX_API_URL}pokemons/${id}`);
             setPokemon(new Pokemon({...result.data}));
         } catch (error) {
             setError(error);
@@ -23,7 +20,7 @@ const useCatchPokemon = () => {
         }
     };
 
-    return {catchPokemon, pokemon, loading, error};
+    return {transfer, pokemon, loading, error};
 };
 
-export default useCatchPokemon;
+export default usePokemonTransfer;

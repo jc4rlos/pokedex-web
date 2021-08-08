@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+    pokedex:
+        image: jc4rlos/pokedex
+        ports:
+            - '3000:80'
+        environment:
+            - REACT_APP_POKE_API_URL=https://pokeapi.co/api/v2/
+            - REACT_APP_POKEDEX_API_URL=http://localhost:9091/pokedex/v1/
+            - REACT_APP_POKEMON_IMAGES_GIF=https://projectpokemon.org/images/normal-sprite
+            - REACT_APP_POKEMON_IMAGES=https://assets.pokemon.com/assets/cms2/img/pokedex/detail
+            - REACT_APP_POKEMON_SHINY_IMAGES=https://img.pokemondb.net/sprites/home/shiny
+            - REACT_APP_MAX_NUMBER_POKEMONS=10
+            - REACT_APP_MAX_NUMBER_GENERATE_POKEMONS=8
+# version: '3.7'
+# services:
+#     react-web:
+#         container_name: react-prod
+#         build:
+#             context: .
+#             dockerfile: Dockerfile
+#             args:
+#                 - REACT_APP_POKE_API_URL=https://pokeapi.co/api/v2/
+#                 - REACT_APP_POKEDEX_API_URL=http://localhost:9091/pokedex/v1/
+#                 - REACT_APP_POKEMON_IMAGES_GIF=https://projectpokemon.org/images/normal-sprite
+#                 - REACT_APP_POKEMON_IMAGES=https://assets.pokemon.com/assets/cms2/img/pokedex/detail
+#                 - REACT_APP_POKEMON_SHINY_IMAGES=https://img.pokemondb.net/sprites/home/shiny
+#                 - REACT_APP_MAX_NUMBER_POKEMONS=10
+#                 - REACT_APP_MAX_NUMBER_GENERATE_POKEMONS=8
+#         ports:
+#             - '3000:80'
