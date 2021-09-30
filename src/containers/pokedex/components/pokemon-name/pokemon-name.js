@@ -1,5 +1,4 @@
 import React, {memo, useState} from 'react';
-import {Pencil} from '../../../../assets/images';
 import LoadingOverlay from '../../../../components/loading-overlay/loading-overlay';
 import {toTitleCase} from '../../../../utils/string';
 import usePatchPokemonName from '../../hooks/use-patch-pokemon-name';
@@ -7,11 +6,11 @@ import usePatchPokemonName from '../../hooks/use-patch-pokemon-name';
 const PokemonName = ({pokemon}) => {
     const [isEdit, setIsEdit] = useState(false);
     const [pokemonName, setPokemonName] = useState(pokemon.name);
-    const {patchName, pokemon: newPokemon, loading} = usePatchPokemonName();
-    const handleOnEdit = () => {
-        setIsEdit(true);
-        setPokemonName(pokemon.name);
-    };
+    const {patchName, loading} = usePatchPokemonName();
+    // const handleOnEdit = () => {
+    //     setIsEdit(true);
+    //     setPokemonName(pokemon.name);
+    // };
 
     const handleOnChangeName = ({target}) => {
         setPokemonName(target.value);
@@ -33,7 +32,7 @@ const PokemonName = ({pokemon}) => {
             {!isEdit && (
                 <div className="pokemon-detail__name">
                     {toTitleCase(pokemon.name)}{' '}
-                    <img src={Pencil} alt="pencil" width="20" onClick={handleOnEdit} />
+                    {/* <img src={Pencil} alt="pencil" width="20" onClick={handleOnEdit} /> */}
                 </div>
             )}
             {isEdit && (
