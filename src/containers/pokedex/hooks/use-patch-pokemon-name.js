@@ -3,18 +3,18 @@ import {useState} from 'react';
 import {env} from '../../../constants/environment';
 import Pokemon from '../../../models/pokemon';
 
-const useCatchPokemon = () => {
+const usePatchPokemonName = () => {
     const [pokemon, setPokemon] = useState(undefined);
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
 
-    const catchPokemon = async (data) => {
+    const patchName = async (data) => {
         try {
             setLoading(true);
-            const result = await axios.post(`${env.POKEDEX_API_URL}pokemons`, {
-                ...data,
-                id: null,
-            });
+            const result = await axios.patch(
+                `${env.POKEDEX_API_URL}pokemons/update-name/${data.id}`,
+                data
+            );
             setPokemon(new Pokemon({...result.data}));
         } catch (error) {
             setError(error);
@@ -23,7 +23,7 @@ const useCatchPokemon = () => {
         }
     };
 
-    return {catchPokemon, pokemon, loading, error};
+    return {patchName, pokemon, loading, error};
 };
 
-export default useCatchPokemon;
+export default usePatchPokemonName;

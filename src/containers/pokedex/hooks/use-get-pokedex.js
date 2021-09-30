@@ -7,10 +7,12 @@ const useGetPokedex = () => {
     const [error, setError] = useState(undefined);
     const [loading, setLoading] = useState(false);
 
-    const getPokedex = async () => {
+    const getPokedex = async (orderByColumn) => {
         try {
             setLoading(true);
-            const result = await axios.get(`${env.POKEDEX_API_URL}pokemons`);
+            const result = await axios.get(
+                `${env.POKEDEX_API_URL}pokemons?orderByColumn=${orderByColumn}&ascending=false`
+            );
             setPokemons(result.data);
         } catch (error) {
             setError(error);

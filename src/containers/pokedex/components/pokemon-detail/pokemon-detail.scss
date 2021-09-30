@@ -185,6 +185,7 @@
         font-weight: bold;
         font-size: 17px;
         padding: 7px;
+        border: 0;
     }
     &__envolve-image {
         opacity: 0.6;
@@ -195,5 +196,21 @@
         color: #f4999d;
         font-weight: bold;
         font-size: 18px;
+    }
+    &__input-name{
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__options{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    &__options-transfer{
+        text-align: right;
+        padding-right: 5px;
+    }
+    &__options-ok{
+        text-align: center;
+        padding-left: 50px;
     }
 }

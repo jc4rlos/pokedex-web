@@ -64,7 +64,7 @@ export const POKEMON_COLOR_TYPES = {
     ghost: '#86a5d8',
     ground: '#cbb499',
     ice: '#99e3e0',
-    normal: Normal,
+    normal: '#a5a8a7',
     poison: Poison,
     psychic: '#e0b2b4',
     rock: Rock,

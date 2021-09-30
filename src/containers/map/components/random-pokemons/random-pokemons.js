@@ -1,4 +1,4 @@
-import React, {memo, useRef, useState} from 'react';
+import React, {memo, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import useInterval from '../../../../hooks/use-interval';
 import {getGeneratePokemons} from '../../../../utils/pokemon';
@@ -21,9 +21,9 @@ const RandomPokemons = ({pokemons, setPokemons, getRandomNumber}) => {
     return (
         <div className="random-pokemons">
             <div className="random-pokemons__container" ref={container}>
-                {pokemons.map((pokemon) => {
+                {pokemons.map((pokemon, index) => {
                     return (
-                        <Link key={pokemon.id} to={`catch/${pokemon.id}`}>
+                        <Link key={`${pokemon.id}-${index}`} to={`catch/${pokemon.id}`}>
                             <img
                                 className="random-pokemons__image"
                                 alt="pokemon"
