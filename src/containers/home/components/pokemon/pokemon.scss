@@ -1,0 +1,54 @@
+@import '../../../../assets/styles/mixins/media.scss';
+
+.pokemon {
+    &__container {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 44%;
+    }
+    &__type {
+        top: 0;
+        position: absolute;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: #71d1da;
+        opacity: 0.6;
+        border-radius: 30px;
+        margin: 11px 0 0 -25px;
+        img {
+            margin: 5px;
+        }
+    }
+    &__exit-catch {
+        padding: 10px;
+    }
+    &__image {
+        text-align: center;
+        padding-top: 20px;
+    }
+    &__information {
+        background-color: #68ba36;
+        padding: 12px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0.6;
+        border-radius: 23px;
+        height: 50px;
+        width: 300px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 5px;
+        margin: 0 auto;
+        @include device-xs {
+            width: 300px;
+        }
+    }
+    &__text {
+        color: #fff;
+        text-align: center;
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,31 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 70px 1fr;
+        column-gap: 10px;
+    }
+    &__pokeball {
+        align-items: flex-end;
+        display: flex;
+    }
+    &__pokemon {
+        text-align: center;
+        // align-items: flex-end;
+        // display: flex;
+        background-color: #ddd;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        padding: 10px;
+    }
+    &__random {
+        align-items: flex-end;
+        text-align: right;
+    }
+}

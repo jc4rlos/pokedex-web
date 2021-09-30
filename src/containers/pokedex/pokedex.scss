@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixins/media.scss';
+
+.pokedex {
+    background-color: #5dc5b1;
+    width: 100%;
+    padding: 0 5px;
+    min-height: 100vh;
+    &__container {
+        background-color: #f5fff4;
+        width: 100%;
+        min-height: 100vh;
+    }
+    &__button {
+        position: fixed;
+        bottom: 20px;
+        text-align: center;
+        left: 45%;
+    }
+    &__button-left{
+        position: fixed;
+        bottom: 20px;
+        text-align: left;
+        left: 3%;
+        background-color: #1c8796;
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        padding: 12px;
+    }
+    &__button-right{
+        position: fixed;
+        bottom: 20px;
+        text-align: right;
+        right: 3%;
+        background-color: #1c8796;
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        padding: 12px;
+    }
+}
